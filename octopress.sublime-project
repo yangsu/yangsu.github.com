@@ -1,0 +1,15 @@
+{
+  "folders":
+  [
+    {
+      "path": "~/Code/octopress",
+      "folder_exclude_patterns": ["_deploy", ".themes", ".pygments-cache", "vendor", "plugins"],
+      "file_exclude_patterns": ["*.sublime-workspace"]
+    }
+  ],
+  "settings": {
+    "tab_size": 2,
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true
+  }
+}
