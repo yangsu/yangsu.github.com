@@ -2,6 +2,7 @@
 .DS_Store
 .sass-cache
 .gist-cache
+.preview-mode
 .pygments-cache
 _deploy
 public
@@ -11,5 +12,4 @@ source/_stash
 source/stylesheets/screen.css
 vendor
 node_modules
-
 *.sublime-workspace
