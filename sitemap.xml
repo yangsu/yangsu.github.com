@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://yangsu.github.com/blog/2012/10/03/hello-world/</loc>
+        <lastmod>2012-10-08T19:06:28-04:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://yangsu.github.com/blog/2012/10/11/using-octopress-with-github-flavored-markdown-redcarpet/
+        </loc>
+        <lastmod>2012-10-11T13:50:21-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yangsu.github.com/blog/archives/</loc>
+        <lastmod>2012-10-11T13:50:21-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yangsu.github.com/</loc>
+        <lastmod>2012-10-11T13:50:21-04:00</lastmod>
+    </url>
+</urlset>

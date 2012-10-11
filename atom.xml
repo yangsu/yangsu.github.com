@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Aspiring Entrepreneur]]></title>
+  <link href="http://yangsu.github.com/atom.xml" rel="self"/>
+  <link href="http://yangsu.github.com/"/>
+  <updated>2012-10-11T13:52:24-04:00</updated>
+  <id>http://yangsu.github.com/</id>
+  <author>
+    <name><![CDATA[Yang Su]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using Octopress with Github Flavored Markdown (RedCarpet)]]></title>
+    <link href="http://yangsu.github.com/blog/2012/10/11/using-octopress-with-github-flavored-markdown-redcarpet/"/>
+    <updated>2012-10-11T11:38:00-04:00</updated>
+    <id>http://yangsu.github.com/blog/2012/10/11/using-octopress-with-github-flavored-markdown-redcarpet</id>
+    <content type="html"><![CDATA[<p>One of the most annoying features of Markdown for me is the fact that newlines within a paragraph are automatically joined, which is one of the reasons why I like <a href="http://github.github.com/github-flavored-markdown/">Github Flavored Markdown</a> so much.</p>
+
+<p>Ever since I setup my Octopress blog, I&#39;ve wanted to use it with GFM. I searched around the web and found how to switch the markdown processor for <a href="http://jekyllrb.com/">Jekyll</a>. I came across <a href="http://www.whatwherewhy.me/blog/2012/01/15/changing-the-markdown-processor-in-octopress/">this post</a> with instructions on switching to <a href="http://maruku.rubyforge.org/">Maruku</a>, which extends Markdown with the ability to create tables, footnotes, custom header ids, etc. I gave it a shot, but quickly realized that there&#39;s no option to enable hard warp linebreaks. Back to searching.</p>
+
+<!-- more -->
+
+<p>I then came across <a href="http://stackoverflow.com/questions/373002/better-ruby-markdown-interpreter">this post</a> on Stackoverflow that compared <a href="http://maruku.rubyforge.org/">Maruku</a>, <a href="http://www.deveiate.org/projects/BlueCloth">BlueCloth</a>, and <a href="https://github.com/rtomayko/rdiscount">RDiscount</a>, none of which offered what I wanted. However, I discovered <a href="https://github.com/blog/832-rolling-out-the-redcarpet">RedCarpet</a>, the open source Markdown processor tha Github uses to render Markdown and GFM pages. Seems like exactly what I was looking for.</p>
+
+<p>Maybe it&#39;s because my Google-Fu is not up to par, but I could not find any instructions on using RedCarpet with Octopress. It turned out that I was just not looking for the correct terms. I found <a href="http://stackoverflow.com/questions/10759577/underscore-issues-jekyll-redcarpet-github-flavored-markdown?rq=1">a Stackoverflow answer</a> on how to <a href="https://github.com/mojombo/jekyll/wiki/configuration">configure Jekyll</a> with RedCarpet. Perfect!</p>
+
+<p>Below are the instructions for getting Octopress to render Github Flavored Markdown using RedCarpet.</p>
+
+<hr>
+
+<ol>
+<li>add <code>gem &#39;redcarpet&#39;, &#39;~&gt; 2.1.1&#39;</code> to <code>Gemfile</code> in the Octopress directory</li>
+<li>run <code>bundle install --no-deployment</code> to install RedCarpet</li>
+<li>Install <a href="https://github.com/nono">@nono</a>&#39;s <a href="https://github.com/nono/Jekyll-plugins">RedCarpet Jekyll Plugin</a> by saving it as <code>redcarpet2_markdown.rb</code> in the <code>plugins</code> folder</li>
+</ol>
+
+<figure class='code'><figcaption><span>redcarpet2_markdown.rb </span><a href='https://github.com/nono/Jekyll-plugins/blob/master/redcarpet2_markdown.rb'>View on Github</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;fileutils&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;digest/md5&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;redcarpet&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;albino&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">PYGMENTS_CACHE_DIR</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">expand_path</span><span class="p">(</span><span class="s1">&#39;../../_cache&#39;</span><span class="p">,</span> <span class="bp">__FILE__</span><span class="p">)</span>
+</span><span class='line'><span class="no">FileUtils</span><span class="o">.</span><span class="n">mkdir_p</span><span class="p">(</span><span class="no">PYGMENTS_CACHE_DIR</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">Redcarpet2Markdown</span> <span class="o">&lt;</span> <span class="no">Redcarpet</span><span class="o">::</span><span class="no">Render</span><span class="o">::</span><span class="no">HTML</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">block_code</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">lang</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">lang</span> <span class="o">=</span> <span class="n">lang</span> <span class="o">||</span> <span class="s2">&quot;text&quot;</span>
+</span><span class='line'>    <span class="n">path</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="no">PYGMENTS_CACHE_DIR</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">lang</span><span class="si">}</span><span class="s2">-</span><span class="si">#{</span><span class="no">Digest</span><span class="o">::</span><span class="no">MD5</span><span class="o">.</span><span class="n">hexdigest</span> <span class="n">code</span><span class="si">}</span><span class="s2">.html&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">cache</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">do</span>
+</span><span class='line'>      <span class="n">colorized</span> <span class="o">=</span> <span class="no">Albino</span><span class="o">.</span><span class="n">colorize</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">lang</span><span class="p">)</span>
+</span><span class='line'>      <span class="n">add_code_tags</span><span class="p">(</span><span class="n">colorized</span><span class="p">,</span> <span class="n">lang</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">add_code_tags</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">lang</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">code</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sr">/&lt;pre&gt;/</span><span class="p">,</span> <span class="s2">&quot;&lt;pre&gt;&lt;code class=</span><span class="se">\&quot;</span><span class="si">#{</span><span class="n">lang</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&gt;&quot;</span><span class="p">)</span><span class="o">.</span>
+</span><span class='line'>         <span class="nb">sub</span><span class="p">(</span><span class="sr">/&lt;\/pre&gt;/</span><span class="p">,</span> <span class="s2">&quot;&lt;/code&gt;&lt;/pre&gt;&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">cache</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="no">File</span><span class="o">.</span><span class="n">exist?</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</span><span class='line'>      <span class="no">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">else</span>
+</span><span class='line'>      <span class="n">content</span> <span class="o">=</span> <span class="k">yield</span>
+</span><span class='line'>      <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="p">{</span><span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span> <span class="p">}</span>
+</span><span class='line'>      <span class="n">content</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">Jekyll</span><span class="o">::</span><span class="no">MarkdownConverter</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">extensions</span>
+</span><span class='line'>    <span class="no">Hash</span><span class="o">[</span> <span class="o">*</span><span class="vi">@config</span><span class="o">[</span><span class="s1">&#39;redcarpet&#39;</span><span class="o">][</span><span class="s1">&#39;extensions&#39;</span><span class="o">].</span><span class="n">map</span> <span class="p">{</span><span class="o">|</span><span class="n">e</span><span class="o">|</span> <span class="o">[</span><span class="n">e</span><span class="o">.</span><span class="n">to_sym</span><span class="p">,</span> <span class="kp">true</span><span class="o">]</span> <span class="p">}</span><span class="o">.</span><span class="n">flatten</span> <span class="o">]</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">markdown</span>
+</span><span class='line'>    <span class="vi">@markdown</span> <span class="o">||=</span> <span class="no">Redcarpet</span><span class="o">::</span><span class="no">Markdown</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">Redcarpet2Markdown</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">extensions</span><span class="p">),</span> <span class="n">extensions</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="k">super</span> <span class="k">unless</span> <span class="vi">@config</span><span class="o">[</span><span class="s1">&#39;markdown&#39;</span><span class="o">]</span> <span class="o">==</span> <span class="s1">&#39;redcarpet2&#39;</span>
+</span><span class='line'>    <span class="n">markdown</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+4. Replace `markdown: rdiscount` in `_config.yml` with the following
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">markdown</span><span class="p">:</span> <span class="n">redcarpet2</span>
+</span><span class='line'><span class="n">redcarpet</span><span class="p">:</span>
+</span><span class='line'>  <span class="n">extensions</span><span class="p">:</span> <span class="o">[</span><span class="s2">&quot;hard_wrap&quot;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+<p>That should be it! Now the lines should be hard wrapped. I also have a few other extensions turned on. Below is my extension settings:<br>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span><br>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">extensions</span><span class="p">:</span> <span class="o">[</span><span class="s2">&quot;hard_wrap&quot;</span><span class="p">,</span> <span class="s2">&quot;no_intra_emphasis&quot;</span><span class="p">,</span> <span class="s2">&quot;fenced_code_blocks&quot;</span><span class="p">,</span> <span class="s2">&quot;autolink&quot;</span><span class="p">,</span> <span class="s2">&quot;tables&quot;</span><span class="p">,</span> <span class="s2">&quot;with_toc_data&quot;</span><span class="p">,</span> <span class="s2">&quot;strikethrough&quot;</span><span class="p">,</span> <span class="s2">&quot;superscript&quot;</span><span class="o">]</span><br>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<ul>
+<li><code>no_intra_emphasis</code>: <code>Multiple_underscores_in_words</code> =&gt; Multiple_underscores_in_words</li>
+<li><code>fenced_code_blocks</code>: Don&#39;t need to endent to embed code</li>
+<li><code>autolink</code>: URL autolinking =&gt; <a href="http://google.com">http://google.com</a> <a href="mailto:test@email.com">test@email.com</a></li>
+<li><code>tables</code>: allow tables</li>
+<li><code>with_toc_data</code>: add HTML anchors to each header</li>
+<li><code>strikethrough</code>: <code>~~strikethrough text~~</code> =&gt; <del>strikethrough text</del></li>
+<li><code>superscript</code>: <code>normaltext ^(superscript)</code> =&gt; normaltext <sup>superscript</sup></li>
+</ul>
+
+<p>More options are described in <a href="https://github.com/vmg/redcarpet">RedCarpet&#39;s Documentation</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World]]></title>
+    <link href="http://yangsu.github.com/blog/2012/10/03/hello-world/"/>
+    <updated>2012-10-03T21:07:00-04:00</updated>
+    <id>http://yangsu.github.com/blog/2012/10/03/hello-world</id>
+    <content type="html"><![CDATA[<p>欢迎！</p>
+]]></content>
+  </entry>
+  
+</feed>

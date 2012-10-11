@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Markdown | Aspiring Entrepreneur]]></title>
+  <link href="http://yangsu.github.com/blog/categories/markdown/atom.xml" rel="self"/>
+  <link href="http://yangsu.github.com/"/>
+  <updated>2012-10-11T13:52:24-04:00</updated>
+  <id>http://yangsu.github.com/</id>
+  <author>
+    <name><![CDATA[Yang Su]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using Octopress with Github Flavored Markdown (RedCarpet)]]></title>
+    <link href="http://yangsu.github.com/blog/2012/10/11/using-octopress-with-github-flavored-markdown-redcarpet/"/>
+    <updated>2012-10-11T11:38:00-04:00</updated>
+    <id>http://yangsu.github.com/blog/2012/10/11/using-octopress-with-github-flavored-markdown-redcarpet</id>
+    <content type="html"><![CDATA[<p>One of the most annoying features of Markdown for me is the fact that newlines within a paragraph are automatically joined, which is one of the reasons why I like <a href="http://github.github.com/github-flavored-markdown/">Github Flavored Markdown</a> so much.</p>
+
+<p>Ever since I setup my Octopress blog, I&#39;ve wanted to use it with GFM. I searched around the web and found how to switch the markdown processor for <a href="http://jekyllrb.com/">Jekyll</a>. I came across <a href="http://www.whatwherewhy.me/blog/2012/01/15/changing-the-markdown-processor-in-octopress/">this post</a> with instructions on switching to <a href="http://maruku.rubyforge.org/">Maruku</a>, which extends Markdown with the ability to create tables, footnotes, custom header ids, etc. I gave it a shot, but quickly realized that there&#39;s no option to enable hard warp linebreaks. Back to searching.</p>
+
+<!-- more -->
+
+<p>I then came across <a href="http://stackoverflow.com/questions/373002/better-ruby-markdown-interpreter">this post</a> on Stackoverflow that compared <a href="http://maruku.rubyforge.org/">Maruku</a>, <a href="http://www.deveiate.org/projects/BlueCloth">BlueCloth</a>, and <a href="https://github.com/rtomayko/rdiscount">RDiscount</a>, none of which offered what I wanted. However, I discovered <a href="https://github.com/blog/832-rolling-out-the-redcarpet">RedCarpet</a>, the open source Markdown processor tha Github uses to render Markdown and GFM pages. Seems like exactly what I was looking for.</p>
+
+<p>Maybe it&#39;s because my Google-Fu is not up to par, but I could not find any instructions on using RedCarpet with Octopress. It turned out that I was just not looking for the correct terms. I found <a href="http://stackoverflow.com/questions/10759577/underscore-issues-jekyll-redcarpet-github-flavored-markdown?rq=1">a Stackoverflow answer</a> on how to <a href="https://github.com/mojombo/jekyll/wiki/configuration">configure Jekyll</a> with RedCarpet. Perfect!</p>
+
+<p>Below are the instructions for getting Octopress to render Github Flavored Markdown using RedCarpet.</p>
+
+<hr>
+
+<ol>
+<li>add <code>gem &#39;redcarpet&#39;, &#39;~&gt; 2.1.1&#39;</code> to <code>Gemfile</code> in the Octopress directory</li>
+<li>run <code>bundle install --no-deployment</code> to install RedCarpet</li>
+<li>Install <a href="https://github.com/nono">@nono</a>&#39;s <a href="https://github.com/nono/Jekyll-plugins">RedCarpet Jekyll Plugin</a> by saving it as <code>redcarpet2_markdown.rb</code> in the <code>plugins</code> folder</li>
+</ol>
+
+<p>``` ruby redcarpet2_markdown.rb <a href="https://github.com/nono/Jekyll-plugins/blob/master/redcarpet2_markdown.rb">https://github.com/nono/Jekyll-plugins/blob/master/redcarpet2_markdown.rb</a> View on Github<br>
+require &#39;fileutils&#39;<br>
+require &#39;digest/md5&#39;<br>
+require &#39;redcarpet&#39;<br>
+require &#39;albino&#39;</p>
+
+<p>PYGMENTS<em>CACHE_DIR = File.expand_path(&#39;../../_cache&#39;, __FILE</em>_)<br>
+FileUtils.mkdir_p(PYGMENTS_CACHE_DIR)</p>
+
+<p>class Redcarpet2Markdown &lt; Redcarpet::Render::HTML<br>
+  def block_code(code, lang)<br>
+    lang = lang || &quot;text&quot;<br>
+    path = File.join(PYGMENTS_CACHE_DIR, &quot;#{lang}-#{Digest::MD5.hexdigest code}.html&quot;)<br>
+    cache(path) do<br>
+      colorized = Albino.colorize(code, lang)<br>
+      add_code_tags(colorized, lang)<br>
+    end<br>
+  end</p>
+
+<p>def add_code_tags(code, lang)<br>
+    code.sub(/<pre>/, &quot;<pre><code class=\"#{lang}\">&quot;).<br>
+         sub(/&lt;\/pre&gt;/, &quot;</code></pre>&quot;)<br>
+  end</p>
+
+<p>def cache(path)<br>
+    if File.exist?(path)<br>
+      File.read(path)<br>
+    else<br>
+      content = yield<br>
+      File.open(path, &#39;w&#39;) {|f| f.print(content) }<br>
+      content<br>
+    end<br>
+  end<br>
+end</p>
+
+<p>class Jekyll::MarkdownConverter<br>
+  def extensions<br>
+    Hash[ *@config[&#39;redcarpet&#39;][&#39;extensions&#39;].map {|e| [e.to_sym, true] }.flatten ]<br>
+  end</p>
+
+<p>def markdown<br>
+    @markdown ||= Redcarpet::Markdown.new(Redcarpet2Markdown.new(extensions), extensions)<br>
+  end</p>
+
+<p>def convert(content)<br>
+    return super unless @config[&#39;markdown&#39;] == &#39;redcarpet2&#39;<br>
+    markdown.render(content)<br>
+  end<br>
+end<br>
+<code><br>
+4. Replace `markdown: rdiscount` in `_config.yml` with the following<br>
+</code> ruby<br>
+markdown: redcarpet2<br>
+redcarpet:<br>
+  extensions: [&quot;hard_wrap&quot;]<br>
+```</p>
+
+<p>That should be it! Now the lines should be hard wrapped. I also have a few other extensions turned on. Below is my extension settings:<br>
+<code>ruby<br>
+extensions: [&quot;hard_wrap&quot;, &quot;no_intra_emphasis&quot;, &quot;fenced_code_blocks&quot;, &quot;autolink&quot;, &quot;tables&quot;, &quot;with_toc_data&quot;, &quot;strikethrough&quot;, &quot;superscript&quot;]<br>
+</code></p>
+
+<ul>
+<li><code>no_intra_emphasis</code>: <code>Multiple_underscores_in_words</code> =&gt; Multiple_underscores_in_words</li>
+<li><code>fenced_code_blocks</code>: Don&#39;t need to endent to embed code</li>
+<li><code>autolink</code>: URL autolinking =&gt; <a href="http://google.com">http://google.com</a> <a href="mailto:test@email.com">test@email.com</a></li>
+<li><code>tables</code>: allow tables</li>
+<li><code>with_toc_data</code>: add HTML anchors to each header</li>
+<li><code>strikethrough</code>: <code>~~strikethrough text~~</code> =&gt; <del>strikethrough text</del></li>
+<li><code>superscript</code>: <code>normaltext ^(superscript)</code> =&gt; normaltext <sup>superscript</sup></li>
+</ul>
+
+<p>More options are described in <a href="https://github.com/vmg/redcarpet">RedCarpet&#39;s Documentation</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>
