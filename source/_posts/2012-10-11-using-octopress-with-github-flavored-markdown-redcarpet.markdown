@@ -86,7 +86,7 @@ extensions: ["hard_wrap", "no_intra_emphasis", "fenced_code_blocks", "autolink",
 ```
 
 * `no_intra_emphasis`: `Multiple_underscores_in_words` => Multiple_underscores_in_words
-* `fenced_code_blocks`: Don't need to endent to embed code
+* `fenced_code_blocks`: Don't need to indent to embed code
 * `autolink`: URL autolinking => http://google.com test@email.com
 * `tables`: allow tables
 * `with_toc_data`: add HTML anchors to each header
