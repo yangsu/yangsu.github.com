@@ -5,6 +5,7 @@
 .preview-mode
 .pygments-cache
 _deploy
+_cache
 public
 sass.old
 source.old
