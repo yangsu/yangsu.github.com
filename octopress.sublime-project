@@ -3,7 +3,7 @@
   [
     {
       "path": "~/Code/octopress",
-      "folder_exclude_patterns": ["_deploy", ".themes", ".pygments-cache", "vendor", "plugins"],
+      "folder_exclude_patterns": ["_deploy", ".themes", ".pygments-cache", "vendor"],
       "file_exclude_patterns": ["*.sublime-workspace"]
     }
   ],
