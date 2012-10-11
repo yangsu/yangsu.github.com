@@ -36,7 +36,7 @@ category_dir: blog/categories
 markdown: redcarpet2
 
 redcarpet:
-  extensions: ["hard_wrap", "no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "superscript"]
+  extensions: ["hard_wrap", "no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough", "superscript"]
 
 pygments: false # default python pygments have been replaced by pygments.rb
 
