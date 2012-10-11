@@ -4,15 +4,17 @@ title: "The Design of Everyday Things"
 date: 2012-10-10 11:27
 comments: true
 published: false
-categories: Design Books Independent-Study
+categories: [Design, Books, Independent Study]
 ---
 > Everyday tasks are not difficult because of their inherent complexity - they are difficult only because they require learning arbitrary relationships and mappings, and because they sometimes require precision in their execution.
 
-<img src="/images/teapot-for-masochists.jpeg" alt="" class="alignleft" style="margin-right: 20px">
+<img src="/images/teapot-for-masochists.jpeg" alt="" class="alignleft" style="margin-right: 20px; margin-top: 8px;">
 
 Design is something that I've always wanted to learn, but never received a formal introduction to. It's something I've always emulated but always fail to create. With Design and UX of products becoming increasingly important as a differentiator for startups and a means to establish a memorable brand image or memory of a product, it's become even more imperative for me to learn Design.
 
 Unfortunately, the Computer Science department does not offer any courses in Human-Computer Interaction. Through a series of considerations, weighing the benefit of completing my graduation requirements this semester and having the option of graduating early, versus not having to suffer through yet another class that fails to interest me and using my extra class slot for something of my own choosing. I decided to go with the latter, due to many factors I will not get into here. Regardless, I definitely think I've made the right choice.
+
+<!-- more -->
 
 Per one of my friend's suggestion, I decided to pursue an Independent Research Study in Human-Computer Interaction with a focus on Interface Design and Data Visualization under Professor Duvall.
 
