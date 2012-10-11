@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Design | Aspiring Entrepreneur]]></title>
+  <link href="http://yangsu.github.com/blog/categories/design/atom.xml" rel="self"/>
+  <link href="http://yangsu.github.com/"/>
+  <updated>2012-10-11T14:06:54-04:00</updated>
+  <id>http://yangsu.github.com/</id>
+  <author>
+    <name><![CDATA[Yang Su]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The Design of Everyday Things]]></title>
+    <link href="http://yangsu.github.com/blog/2012/10/10/the-design-of-everyday-things/"/>
+    <updated>2012-10-10T11:27:00-04:00</updated>
+    <id>http://yangsu.github.com/blog/2012/10/10/the-design-of-everyday-things</id>
+    <content type="html"><![CDATA[<blockquote>
+<p>Everyday tasks are not difficult because of their inherent complexity - they are difficult only because they require learning arbitrary relationships and mappings, and because they sometimes require precision in their execution.</p>
+</blockquote>
+
+<p><img src="http://yangsu.github.com/images/teapot-for-masochists.jpeg" alt="" class="alignleft" style="margin-right: 20px; margin-top: 8px;"></p>
+
+<p>Design is something that I&#39;ve always wanted to learn, but never received a formal introduction to. It&#39;s something I&#39;ve always emulated but always fail to create. With Design and UX of products becoming increasingly important as a differentiator for startups and a means to establish a memorable brand image or memory of a product, it&#39;s become even more imperative for me to learn Design.</p>
+
+<p>Unfortunately, the Computer Science department does not offer any courses in Human-Computer Interaction. Through a series of considerations, weighing the benefit of completing my graduation requirements this semester and having the option of graduating early, versus not having to suffer through yet another class that fails to interest me and using my extra class slot for something of my own choosing. I decided to go with the latter, due to many factors I will not get into here. Regardless, I definitely think I&#39;ve made the right choice.</p>
+
+<!-- more -->
+
+<p>Per one of my friend&#39;s suggestion, I decided to pursue an Independent Research Study in Human-Computer Interaction with a focus on Interface Design and Data Visualization under Professor Duvall.</p>
+
+<p>To build the foundations in Design, Professor Duvall suggested that I read three books, <a href="">The Design of Everyday Things</a>, <a href="">Universal Principles of Design</a>, and <a href="">Interaction Design</a>, as an introduction to Design and a way to become familiar with the basic vocabulary of Design. <a href="">The Design of Everyday Things</a> was the seminal work in Design from the early 1980s and is a particularly enjoyable read. It formalizes design principles from careful observations of mundane everyday objects. Below are the 7 main principles discussed in the book to transform a difficult task into a simple one.</p>
+
+<h4 id="toc_420">1. Use Both Knowledge in the World and Knowledge in the Head</h4>
+
+<p>For first time or infrequent users, knowledge required for a task should be available either <strong>explicitly in the world</strong> or <strong>derived from constraints in the environment</strong>. There should be a natural, easily interpreted relationship between the knowledge and the information it&#39;s intended to convey.</p>
+
+<p>For frequent users, Design should not impede action and allow users to be more efficient, especially for people who have internalized the knowledge. It should be easy to go back and forth between using knowledge in the world and knowledge in the head and the two should coexist without interference.</p>
+
+<p>Manuals and instructions should be written first, the design should the follow. The users can simultaneously test the manual and mock-ups of the system</p>
+
+<h4 id="toc_421">2. Simplify the Structure of Tasks</h4>
+
+<p>Eliminate or restructure complexities, minimizing the planning and problem solving they require. Pay attention to the psychology of a user and the limits on memory and attention</p>
+
+<ul>
+<li>Keep the tasks much the same, but provide mental aids
+Use mental aids for facts essential to everyday functioning, but cannot trust memory structures to provide</li>
+<li>Use tech to make the invisible visible, improving feedback and ability to keep control
+Use graphical displays to inform the user of the system state and make important information visible and accessible and the irrelevant info hidden</li>
+</ul>
+
+<p>These first 2 act as reminders by providing knowledge in the world and reduce the mental load of the trivial parts of a task</p>
+
+<ul>
+<li>Automate, but keep tasks much the same
+Parts of an automated task will disappear, there&#39;s always a trade off. Ideally, a user should be able to choose automation or full control</li>
+<li>Change the nature of the task
+Technology can help transform deep and wide structures into shallow, narrow ones
+Ex:
+Shoelances vs Vecro</li>
+<li>Don&#39;t take away control
+
+<ul>
+<li>over automation can eliminate a person&#39;s ability to function without it, and a major problem if the automation fails</li>
+<li>Can be inflexiblea as the system may not do exactly what&#39;s required because altering the automation is too difficult</li>
+<li>Maintain layers of control and produce automation at each layer so we can switch and be flexible</li>
+</ul></li>
+</ul>
+
+<h4 id="toc_422">3. Make Things Visible: Bridge the Gulfs of  Execution and Evaluations</h4>
+
+<p>Easy to see what&#39;s visible: what can be done and what their effects are.<br>
+Actions should match intentions<br>
+It&#39;s important to make the correct things visible so the users for the correct interpretations and mental models through the system image</p>
+
+<h4 id="toc_423">4. Get the Mappings Right</h4>
+
+<p>Natural Mappings (&quot;response compatibility&quot;): the the spatial relationships between  the controls and the system components or objects they control should be as <strong>direct</strong> as possible, with the controls and the objects themselves or have an analogical relationship<br>
+The movements of the control should be similar or analogous to the expected operation of the system.<br>
+feedback must be timely and easy to understand</p>
+
+<h4 id="toc_424">5. Explore the Power of Constraints, Both Natural and Artificial</h4>
+
+<p>Reduce the number of possible alternative actions at each step to a few or ideally just one[<sup>1]</sup></p>
+
+<h4 id="toc_425">6. Design for Error</h4>
+
+<p>Assume errors will be made. Allow for recovery. Use forcing functions<br>
+Each user action is an attempt to a step in the right direction<br>
+An error is incompletely or improperly specified actions</p>
+
+<h4 id="toc_426">7. When All Fails, Standardize</h4>
+
+<p>Standardize the problem and processes, so arbitrary mappings only have to be learned once<br>
+It maybe difficult to obtain an agreement, early enough to save trouble later on, and late enough to take into account of the existing technologies and procedures<br>
+Standardization is only essential when all necessary information cannot be placed in the world or when normal mapping cannot be exploited<br>
+Users must be trained for this</p>
+]]></content>
+  </entry>
+  
+</feed>

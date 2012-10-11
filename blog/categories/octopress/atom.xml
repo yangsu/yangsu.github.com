@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Aspiring Entrepreneur]]></title>
   <link href="http://yangsu.github.com/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://yangsu.github.com/"/>
-  <updated>2012-10-11T13:52:24-04:00</updated>
+  <updated>2012-10-11T14:06:54-04:00</updated>
   <id>http://yangsu.github.com/</id>
   <author>
     <name><![CDATA[Yang Su]]></name>
@@ -102,7 +102,7 @@ extensions: [&quot;hard_wrap&quot;, &quot;no_intra_emphasis&quot;, &quot;fenced_
 
 <ul>
 <li><code>no_intra_emphasis</code>: <code>Multiple_underscores_in_words</code> =&gt; Multiple_underscores_in_words</li>
-<li><code>fenced_code_blocks</code>: Don&#39;t need to endent to embed code</li>
+<li><code>fenced_code_blocks</code>: Don&#39;t need to indent to embed code</li>
 <li><code>autolink</code>: URL autolinking =&gt; <a href="http://google.com">http://google.com</a> <a href="mailto:test@email.com">test@email.com</a></li>
 <li><code>tables</code>: allow tables</li>
 <li><code>with_toc_data</code>: add HTML anchors to each header</li>
