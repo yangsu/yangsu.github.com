@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Design | Aspiring Entrepreneur]]></title>
+  <link href="http://yangsu.github.com/blog/categories/design/atom.xml" rel="self"/>
+  <link href="http://yangsu.github.com/"/>
+  <updated>2012-10-17T17:13:05-04:00</updated>
+  <id>http://yangsu.github.com/</id>
+  <author>
+    <name><![CDATA[Yang Su]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Chapter 1: The Psychopathology of Everyday Things]]></title>
+    <link href="http://yangsu.github.com/blog/2012/10/14/chapter-1-the-psychopathology-of-everyday-things/"/>
+    <updated>2012-10-14T17:52:00-04:00</updated>
+    <id>http://yangsu.github.com/blog/2012/10/14/chapter-1-the-psychopathology-of-everyday-things</id>
+    <content type="html"><![CDATA[<blockquote>
+<p>The human mind is exquisitely tailored to make sense of the world. Give it the slightest clue and off it goes, providing explanation, rationalization, and understanding.</p>
+</blockquote>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>This chapter of <a href="http://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/0465067107" title="The Design of Everyday Things">The Design of Everyday Things</a> introduces and formalizes basic concepts and principles of design from observations of everyday objects. Why some objects, as simple as doors, please their users while others frustrate them.</p>
+
+<!-- more -->
+
+<h2 id="definitions">Definitions</h2>
+
+<ul>
+<li><p><strong><span id="visibility">Visibility</span></strong>: correct parts must be visible, they must convey the correct messages; indicates the mapping between <em>intended actions</em> and <em>actual operations</em></p></li>
+<li><p><strong><span id="affordance">Affordance</span></strong>: the perceived and actual properties of the thing, primarily the fundamental properties that determine how it can be used. <em>Affords</em> = <em>&quot;is for&quot;</em></p>
+
+<p><em>Examples</em>:</p>
+
+<p><img src="/images/2012-10-14-chapter-1/door-push-bar.jpeg" alt="horizontal bar &lt;em&gt;affords&lt;/em&gt; pushing (www.vanseodesign.com/web-design/minimize-errors-part-i)" title="horizontal bar"></p>
+
+<p><img src="/images/2012-10-14-chapter-1/door-pull-handle.jpeg" alt="vertical bar &lt;em&gt;affords&lt;/em&gt; pulling (www.flickr.com/photos/redsquirrel/4870919966/sizes/m/in/photostream)" title="vertical bar"></p></li>
+<li><p><strong><span id="system-image">System Image</span></strong>: the visible part of a device or system</p></li>
+<li><p><strong><span id="mental-model">Mental Models</span></strong>: the models people have for themselves, others, the environment, and things with which they interact. Formed through experience, training, instructions, or by interpreting perceived actions and the <a href="#system-image">System Image</a></p></li>
+<li><p><strong><span id="mapping">Mapping</span></strong> : the relationship between two things<br>
+<em>Example</em>: controls ⇒ their resulting movements and the effects in the physical world</p></li>
+<li><p><strong><span id="natural-mapping">Natural Mapping</span></strong>: <a href="#mapping">mapping</a> that takes advantage of physical/spatial analogies and cultural standards<br>
+<em>Examples</em>:</p>
+
+<p><img src="/images/2012-10-14-chapter-1/rising-level.png" alt="Rising Level ⇒ More" title="rising level"><br>
+<img src="/images/2012-10-14-chapter-1/diminishing-level.png" alt="Diminishing Level ⇒ Less" title="diminishing level"></p>
+
+<ul>
+<li><p><strong>Additive Dimensions</strong>: add more to show incremental increases</p>
+
+<p><em>Examples</em>: amount, loudness, weight, length, brightness, etc.</p></li>
+<li><p><strong>Substitutive Dimensions</strong>: substitute one value for another to make a change</p>
+
+<p><em>Examples</em>: pitch, taste, color, location</p></li>
+</ul></li>
+<li><p><strong><span id="feedback">Feedback</span></strong>: sending back information to users about what actions have been performed<br>
+<em>Example</em>:<br>
+<img src="/images/2012-10-14-chapter-1/phone.png" alt="Phones provide lots of feedback" title="phone"></p>
+
+<ul>
+<li>Tactile feedback of buttons</li>
+<li>Tones mapped for each button</li>
+<li>Clicks, tones, to inform state and progress of a call or operation</li>
+<li><em>Sidetones</em>, the voice signal feedback into the ear to help regulate loudness</li>
+</ul></li>
+</ul>
+
+<h2 id="principles-of-design">Principles of Design</h2>
+
+<ol>
+<li>Provide a good conceptual model
+
+<ul>
+<li>The proper <a href="#system-image">System Image</a> and immediate <a href="#feedback">feedback</a> for each operation can help users form a clear, concise, and correct <a href="#mental-model">mental model</a></li>
+</ul></li>
+<li>Make Things Visible
+
+<ul>
+<li>Use good <a href="#natural-mapping">natural mappings</a> and proper <a href="#visibility">visibility</a> to help the user understand of possible operations, their effects, and the system state</li>
+<li>The number of controls should be ≧ the number of functions a device performs, so each can be specifically mapped to a particular function</li>
+</ul></li>
+</ol>
+
+<h2 id="designers-responsibility">Designer's Responsibility</h2>
+
+<p>The Designer must balance the conflicting needs of others that help realize a product design:</p>
+
+<ul>
+<li><em>Manufacturer</em>: the product can be produced economically and efficiently</li>
+<li><em>Store</em>: the product should be attractive to customers</li>
+<li><em>Purchaser</em>: the price, appearance, prestige value of a product at the Store</li>
+<li><em>User</em>: the functionality and usability of a product at home</li>
+<li><em>Repairer</em>: the product&#39;s maintainability; how easy it is to take apart, diagnose, and service</li>
+</ul>
+
+<h2 id="development-of-a-technology">Development of a Technology</h2>
+
+<p><img src="/images/2012-10-14-chapter-1/development-of-a-technology.png" alt="Development of a Technology" title="development of a technology"></p>
+
+<h2 id="the-paradox-of-technology">The Paradox of Technology</h2>
+
+<p>The same technology that simplifies life by providing more functions in each device also complicates life by making the device harder to learn and use</p>
+]]></content>
+  </entry>
+  
+</feed>
