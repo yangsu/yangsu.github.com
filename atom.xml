@@ -4,7 +4,7 @@
   <title><![CDATA[Aspiring Entrepreneur]]></title>
   <link href="http://yangsu.github.com/atom.xml" rel="self"/>
   <link href="http://yangsu.github.com/"/>
-  <updated>2012-10-17T17:16:06-04:00</updated>
+  <updated>2013-01-18T15:26:30-05:00</updated>
   <id>http://yangsu.github.com/</id>
   <author>
     <name><![CDATA[Yang Su]]></name>
@@ -12,6 +12,86 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Chapter 2: The Psychology of Everyday Actions]]></title>
+    <link href="http://yangsu.github.com/blog/2012/10/17/chapter-2-the-psychology-of-everyday-actions/"/>
+    <updated>2012-10-17T17:20:00-04:00</updated>
+    <id>http://yangsu.github.com/blog/2012/10/17/chapter-2-the-psychology-of-everyday-actions</id>
+    <content type="html"><![CDATA[<blockquote>
+<p>If an error is possible, someone will make it. The designer must assume that all possible errors will occur and design so as to minimize the chance of error in the first place, or its effects once it gets made. Errors should be easy to detect, they should have minimal consequences, and, if possible, their effects should be reversible.</p>
+</blockquote>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>This chapter of <a href="http://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/0465067107" title="The Design of Everyday Things">The Design of Everyday Things</a> introduces and formalizes basic concepts and principles of design from observations of everyday objects. Why some objects, as simple as doors, please their users while others frustrate them.</p>
+
+<!-- more -->
+
+<p>If a task appears simple or trivial, people blame themselves rather than faulty design.</p>
+
+<p>People tend to find causes for events<br>
+- casual relationship between 2 things occurred in succession<br>
+- perceived relationship between the result and the thing being blamed</p>
+
+<p>blame based on little or erroneous information ⇒ blame/credit can be asserted independent of reality</p>
+
+<p>if everyone perceives the fault to be their own, noby wants to admit to having trouble<br>
+This creates a conspiracy of silence, maintaining the felling of guilt and helplessness among users</p>
+
+<p>In general, people attribute</p>
+
+<ul>
+<li>their problems ⇒ the environment</li>
+<li>problems of others ⇒ others&#39; personalities</li>
+<li>their successes ⇒ their personalities</li>
+<li>successes of others ⇒ the environment</li>
+</ul>
+
+<h2 id="definitions">Definitions</h2>
+
+<ul>
+<li><p><strong><span id="learned-helplessness">Learned Helplessness</span></strong>: people experience failure at a task, often numerous times ⇒ conclude that they simply cannot do the task; they are helpless</p></li>
+<li><p><strong><span id="taught-helplessness">Taught Helplessness</span></strong>:<br>
+failure at a task ⇒<br>
+generalization of failure at all tasks ⇒<br>
+not even trying at a task ⇒<br>
+failure at a task</p></li>
+</ul>
+
+<h2 id="how-people-explain-things">How People Explain Things</h2>
+
+<ul>
+<li>with hindsight, it&#39;s almost impossible to assess how the people could have made the mistake when the course of action is rather logical in that particular situation</li>
+<li>explanations tend to be based on past experiences, which may not apply to the present</li>
+</ul>
+
+<p><h2 id="seven-stages-of-action">Seven Stages of Action</h2><br>
+1. Forming the goal</p>
+
+<h3 id="toc_10">Execution</h3>
+
+<ol>
+<li>Forming the intention</li>
+<li>Specifying an action</li>
+<li>Executing the action or action sequence</li>
+</ol>
+
+<h3 id="toc_11">Evaluation</h3>
+
+<ol>
+<li>Perceiving the state of he world</li>
+<li>Interpreting the state of the world</li>
+<li>Evaluating the outcome</li>
+</ol>
+
+<p>The Gulf of Execution - how well does the system provide actions that correspond to the intentions of the person?<br>
+- measure of how well the system allows a user to perform the intended action</p>
+
+<p>The Gulf of Evaluation - dose the system provide a physical representation that can be directly perceived and that is directly interpretable in terms of the intentions and expectations of the person<br>
+- measure of how much effor a user must exert to interpte the physical state of the system and how well the expectiations are met</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Chapter 1: The Psychopathology of Everyday Things]]></title>
