@@ -4,7 +4,7 @@
   <title><![CDATA[Category: The Design of Everyday Things | Aspiring Entrepreneur]]></title>
   <link href="http://yangsu.github.com/blog/categories/the-design-of-everyday-things/atom.xml" rel="self"/>
   <link href="http://yangsu.github.com/"/>
-  <updated>2013-01-18T15:26:30-05:00</updated>
+  <updated>2013-02-07T02:12:09-05:00</updated>
   <id>http://yangsu.github.com/</id>
   <author>
     <name><![CDATA[Yang Su]]></name>
@@ -22,75 +22,89 @@
 <p>If an error is possible, someone will make it. The designer must assume that all possible errors will occur and design so as to minimize the chance of error in the first place, or its effects once it gets made. Errors should be easy to detect, they should have minimal consequences, and, if possible, their effects should be reversible.</p>
 </blockquote>
 
-<h2 id="introduction">Introduction</h2>
+<h2 id='introduction'>Introduction</h2>
 
-<p>This chapter of <a href="http://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/0465067107" title="The Design of Everyday Things">The Design of Everyday Things</a> introduces and formalizes basic concepts and principles of design from observations of everyday objects. Why some objects, as simple as doors, please their users while others frustrate them.</p>
-
+<p>This chapter of <a href='http://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/0465067107' title='The Design of Everyday Things'>The Design of Everyday Things</a> introduces and formalizes basic concepts and principles of design from observations of everyday objects. Why some objects, as simple as doors, please their users while others frustrate them.</p>
 <!-- more -->
-
 <p>If a task appears simple or trivial, people blame themselves rather than faulty design.</p>
 
-<p>People tend to find causes for events<br>
-- casual relationship between 2 things occurred in succession<br>
-- perceived relationship between the result and the thing being blamed</p>
+<p>People tend to find causes for events</p>
+
+<ul>
+<li>casual relationship between 2 things occurred in succession</li>
+
+<li>perceived relationship between the result and the thing being blamed</li>
+</ul>
 
 <p>blame based on little or erroneous information ⇒ blame/credit can be asserted independent of reality</p>
 
-<p>if everyone perceives the fault to be their own, noby wants to admit to having trouble<br>
-This creates a conspiracy of silence, maintaining the felling of guilt and helplessness among users</p>
+<p>if everyone perceives the fault to be their own, nobody wants to admit to having trouble This creates a conspiracy of silence, maintaining the felling of guilt and helplessness among users</p>
 
 <p>In general, people attribute</p>
 
 <ul>
 <li>their problems ⇒ the environment</li>
-<li>problems of others ⇒ others&#39; personalities</li>
+
+<li>problems of others ⇒ others&#8217; personalities</li>
+
 <li>their successes ⇒ their personalities</li>
+
 <li>successes of others ⇒ the environment</li>
 </ul>
 
-<h2 id="definitions">Definitions</h2>
+<h2 id='definitions'>Definitions</h2>
 
 <ul>
-<li><p><strong><span id="learned-helplessness">Learned Helplessness</span></strong>: people experience failure at a task, often numerous times ⇒ conclude that they simply cannot do the task; they are helpless</p></li>
-<li><p><strong><span id="taught-helplessness">Taught Helplessness</span></strong>:<br>
-failure at a task ⇒<br>
-generalization of failure at all tasks ⇒<br>
-not even trying at a task ⇒<br>
-failure at a task</p></li>
+<li>
+<p><strong id='learned-helplessness'>Learned Helplessness</strong>: people experience failure at a task, often numerous times ⇒ conclude that they simply cannot do the task; they are helpless</p>
+</li>
+
+<li>
+<p><strong id='taught-helplessness'>Taught Helplessness</strong>: failure at a task ⇒ generalization of failure at all tasks ⇒ not even trying at a task ⇒ failure at a task</p>
+</li>
 </ul>
 
-<h2 id="how-people-explain-things">How People Explain Things</h2>
+<h2 id='how-people-explain-things'>How People Explain Things</h2>
 
 <ul>
-<li>with hindsight, it&#39;s almost impossible to assess how the people could have made the mistake when the course of action is rather logical in that particular situation</li>
+<li>with hindsight, it&#8217;s almost impossible to assess how the people could have made the mistake when the course of action is rather logical in that particular situation</li>
+
 <li>explanations tend to be based on past experiences, which may not apply to the present</li>
 </ul>
 
-<p><h2 id="seven-stages-of-action">Seven Stages of Action</h2><br>
-1. Forming the goal</p>
+<h2 id='seven-stages-of-action'>Seven Stages of Action</h2>
 
-<h3 id="toc_8">Execution</h3>
+<p><img alt='Seven Stages of Action' src='/images/2012-10-17-chapter-2/seven-stages-of-action.png' /></p>
 
-<ol>
-<li>Forming the intention</li>
-<li>Specifying an action</li>
-<li>Executing the action or action sequence</li>
-</ol>
+<h3 id='gulfs'>Gulfs</h3>
 
-<h3 id="toc_9">Evaluation</h3>
+<p>Each <em>gulf</em> reflects one aspect of the distance bteween the mental representations of the person and the physical components and states of the environment. These gulfs present major problems for users.</p>
 
-<ol>
-<li>Perceiving the state of he world</li>
-<li>Interpreting the state of the world</li>
-<li>Evaluating the outcome</li>
-</ol>
+<h4 id='the_gulf_of_execution'>The Gulf of Execution</h4>
 
-<p>The Gulf of Execution - how well does the system provide actions that correspond to the intentions of the person?<br>
-- measure of how well the system allows a user to perform the intended action</p>
+<p>&#8220;measure of how well the system allows a user to perform the intended action&#8221;<br /><em>Ex.</em> how well does the system provide actions that correspond to the intentions of the person?</p>
 
-<p>The Gulf of Evaluation - dose the system provide a physical representation that can be directly perceived and that is directly interpretable in terms of the intentions and expectations of the person<br>
-- measure of how much effor a user must exert to interpte the physical state of the system and how well the expectiations are met</p>
-]]></content>
+<h4 id='the_gulf_of_evaluation'>The Gulf of Evaluation</h4>
+
+<p>&#8220;measure of how much effort a user must exert to interpret the physical state of the system and how well the expectations are met&#8221;<br /><em>Ex.</em> Does the system provide a physical representation that can be directly perceived and that is directly interpretable in terms of the intentions and expectations of the person</p>
+
+<h2 id='using_seven_stages_of_action_as_design_aids'>Using Seven Stages of Action as Design Aids</h2>
+
+<h3 id='principles'>Principles</h3>
+
+<ul>
+<li><strong>Feedback</strong>: full, continuous Feedback about the result of actions</li>
+
+<li><strong>Visibility</strong>: by looking, a user can tell the state of the device and laternatives for action</li>
+
+<li><strong>Good Conseptual Model</strong>: consistency/coherenc in presentations of operations, results, system image</li>
+
+<li><strong>Mapping</strong>: actions ⬄ results, controls ⬄ effects, system state ⬄ what&#8217;s visible</li>
+</ul>
+
+<h3 id='design_questions'>Design Questions</h3>
+
+<p><img alt='Ask Design Questions using the Seven Stages' src='/images/2012-10-17-chapter-2/seven-stages-questions.png' /></p>]]></content>
   </entry>
   
   <entry>
@@ -102,89 +116,95 @@ failure at a task</p></li>
 <p>The human mind is exquisitely tailored to make sense of the world. Give it the slightest clue and off it goes, providing explanation, rationalization, and understanding.</p>
 </blockquote>
 
-<h2 id="introduction">Introduction</h2>
+<h2 id='introduction'>Introduction</h2>
 
-<p>This chapter of <a href="http://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/0465067107" title="The Design of Everyday Things">The Design of Everyday Things</a> introduces and formalizes basic concepts and principles of design from observations of everyday objects. Why some objects, as simple as doors, please their users while others frustrate them.</p>
-
+<p>This chapter of <a href='http://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/0465067107' title='The Design of Everyday Things'>The Design of Everyday Things</a> introduces and formalizes basic concepts and principles of design from observations of everyday objects. Why some objects, as simple as doors, please their users while others frustrate them.</p>
 <!-- more -->
-
-<h2 id="definitions">Definitions</h2>
+<h2 id='definitions'>Definitions</h2>
 
 <ul>
-<li><p><strong><span id="visibility">Visibility</span></strong>: correct parts must be visible, they must convey the correct messages; indicates the mapping between <em>intended actions</em> and <em>actual operations</em></p></li>
-<li><p><strong><span id="affordance">Affordance</span></strong>: the perceived and actual properties of the thing, primarily the fundamental properties that determine how it can be used. <em>Affords</em> = <em>&quot;is for&quot;</em></p>
+<li>
+<p><strong id='visibility'>Visibility</strong>: correct parts must be visible, they must convey the correct messages; indicates the mapping between <em>intended actions</em> and <em>actual operations</em></p>
+</li>
+
+<li>
+<p><strong id='affordance'>Affordance</strong>: the perceived and actual properties of the thing, primarily the fundamental properties that determine how it can be used. <em>Affords</em> = <em>&#8220;is for&#8221;</em></p>
 
 <p><em>Examples</em>:</p>
 
-<p><img src="/images/2012-10-14-chapter-1/door-push-bar.jpeg" alt="horizontal bar &lt;em&gt;affords&lt;/em&gt; pushing (www.vanseodesign.com/web-design/minimize-errors-part-i)" title="horizontal bar"></p>
+<p><img alt='horizontal bar  pushing (www.vanseodesign.com/web-design/minimize-errors-part-i)' src='/images/2012-10-14-chapter-1/door-push-bar.jpeg' /></p>
 
-<p><img src="/images/2012-10-14-chapter-1/door-pull-handle.jpeg" alt="vertical bar &lt;em&gt;affords&lt;/em&gt; pulling (www.flickr.com/photos/redsquirrel/4870919966/sizes/m/in/photostream)" title="vertical bar"></p></li>
-<li><p><strong><span id="system-image">System Image</span></strong>: the visible part of a device or system</p></li>
-<li><p><strong><span id="mental-model">Mental Models</span></strong>: the models people have for themselves, others, the environment, and things with which they interact. Formed through experience, training, instructions, or by interpreting perceived actions and the <a href="#system-image">System Image</a></p></li>
-<li><p><strong><span id="mapping">Mapping</span></strong> : the relationship between two things<br>
-<em>Example</em>: controls ⇒ their resulting movements and the effects in the physical world</p></li>
-<li><p><strong><span id="natural-mapping">Natural Mapping</span></strong>: <a href="#mapping">mapping</a> that takes advantage of physical/spatial analogies and cultural standards<br>
-<em>Examples</em>:</p>
+<p><img alt='vertical bar  pulling (www.flickr.com/photos/redsquirrel/4870919966/sizes/m/in/photostream)' src='/images/2012-10-14-chapter-1/door-pull-handle.jpeg' /></p>
+</li>
 
-<p><img src="/images/2012-10-14-chapter-1/rising-level.png" alt="Rising Level ⇒ More" title="rising level"><br>
-<img src="/images/2012-10-14-chapter-1/diminishing-level.png" alt="Diminishing Level ⇒ Less" title="diminishing level"></p>
+<li>
+<p><strong id='system-image'>System Image</strong>: the visible part of a device or system</p>
+</li>
 
-<ul>
-<li><p><strong>Additive Dimensions</strong>: add more to show incremental increases</p>
+<li>
+<p><strong id='mental-model'>Mental Models</strong>: the models people have for themselves, others, the environment, and things with which they interact. Formed through experience, training, instructions, or by interpreting perceived actions and the <a href='#system-image'>System Image</a></p>
+</li>
 
-<p><em>Examples</em>: amount, loudness, weight, length, brightness, etc.</p></li>
-<li><p><strong>Substitutive Dimensions</strong>: substitute one value for another to make a change</p>
+<li>
+<p><strong>Mapping</strong> : the relationship between two things <em>Example</em>: controls ⇒ their resulting movements and the effects in the physical world</p>
+</li>
 
-<p><em>Examples</em>: pitch, taste, color, location</p></li>
-</ul></li>
-<li><p><strong><span id="feedback">Feedback</span></strong>: sending back information to users about what actions have been performed<br>
-<em>Example</em>:<br>
-<img src="/images/2012-10-14-chapter-1/phone.png" alt="Phones provide lots of feedback" title="phone"></p>
+<li>
+<p><strong id='natural-mapping'>Natural Mapping</strong>: <a href='#mapping'>mapping</a> that takes advantage of physical/spatial analogies and cultural standards <em>Examples</em>:</p>
 
-<ul>
-<li>Tactile feedback of buttons</li>
-<li>Tones mapped for each button</li>
-<li>Clicks, tones, to inform state and progress of a call or operation</li>
-<li><em>Sidetones</em>, the voice signal feedback into the ear to help regulate loudness</li>
-</ul></li>
+<p><img alt='Rising Level ⇒ More' src='/images/2012-10-14-chapter-1/rising-level.png' /> <img alt='Diminishing Level ⇒ Less' src='/images/2012-10-14-chapter-1/diminishing-level.png' /></p>
+
+<p>- <strong>Additive Dimensions</strong>: add more to show incremental increases <em>Examples</em>: amount, loudness, weight, length, brightness, etc.</p>
+
+<p>- <strong>Substitutive Dimensions</strong>: substitute one value for another to make a change <em>Examples</em>: pitch, taste, color, location</p>
+</li>
+
+<li>
+<p><strong>Feedback</strong>: sending back information to users about what actions have been performed <em>Example</em>: <img alt='Phones provide lots of feedback' src='/images/2012-10-14-chapter-1/phone.png' /> - Tactile feedback of buttons - Tones mapped for each button - Clicks, tones, to inform state and progress of a call or operation - <em>Sidetones</em>, the voice signal feedback into the ear to help regulate loudness</p>
+</li>
 </ul>
 
-<h2 id="principles-of-design">Principles of Design</h2>
+<h2 id='principles-of-design'>Principles of Design</h2>
 
 <ol>
-<li>Provide a good conceptual model
+<li>
+<p>Provide a good conceptual model - The proper <a href='#system-image'>System Image</a> and immediate <a href='#feedback'>feedback</a> for each operation can help users form a clear, concise, and correct <a href='#mental-model'>mental model</a></p>
+</li>
+
+<li>
+<p>Make Things Visible</p>
 
 <ul>
-<li>The proper <a href="#system-image">System Image</a> and immediate <a href="#feedback">feedback</a> for each operation can help users form a clear, concise, and correct <a href="#mental-model">mental model</a></li>
-</ul></li>
-<li>Make Things Visible
+<li>Use good <a href='#natural-mapping'>natural mappings</a> and proper <a href='#visibility'>visibility</a> to help the user understand of possible operations, their effects, and the system state</li>
 
-<ul>
-<li>Use good <a href="#natural-mapping">natural mappings</a> and proper <a href="#visibility">visibility</a> to help the user understand of possible operations, their effects, and the system state</li>
 <li>The number of controls should be ≧ the number of functions a device performs, so each can be specifically mapped to a particular function</li>
-</ul></li>
+</ul>
+</li>
 </ol>
 
-<h2 id="designers-responsibility">Designer's Responsibility</h2>
+<h2 id='designers-responsibility'>Designer&#8217;s Responsibility</h2>
 
 <p>The Designer must balance the conflicting needs of others that help realize a product design:</p>
 
 <ul>
 <li><em>Manufacturer</em>: the product can be produced economically and efficiently</li>
+
 <li><em>Store</em>: the product should be attractive to customers</li>
+
 <li><em>Purchaser</em>: the price, appearance, prestige value of a product at the Store</li>
+
 <li><em>User</em>: the functionality and usability of a product at home</li>
-<li><em>Repairer</em>: the product&#39;s maintainability; how easy it is to take apart, diagnose, and service</li>
+
+<li><em>Repairer</em>: the product&#8217;s maintainability; how easy it is to take apart, diagnose, and service</li>
 </ul>
 
-<h2 id="development-of-a-technology">Development of a Technology</h2>
+<h2 id='development-of-a-technology'>Development of a Technology</h2>
 
-<p><img src="/images/2012-10-14-chapter-1/development-of-a-technology.png" alt="Development of a Technology" title="development of a technology"></p>
+<p><img alt='Development of a Technology' src='/images/2012-10-14-chapter-1/development-of-a-technology.png' /></p>
 
-<h2 id="the-paradox-of-technology">The Paradox of Technology</h2>
+<h2 id='the-paradox-of-technology'>The Paradox of Technology</h2>
 
-<p>The same technology that simplifies life by providing more functions in each device also complicates life by making the device harder to learn and use</p>
-]]></content>
+<p>The same technology that simplifies life by providing more functions in each device also complicates life by making the device harder to learn and use</p>]]></content>
   </entry>
   
 </feed>
