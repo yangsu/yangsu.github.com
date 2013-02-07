@@ -6,9 +6,11 @@ comments: true
 published: false
 categories: [Design, Books, Independent Study, The Design of Everyday Things]
 ---
+
 > Everyday tasks are not difficult because of their inherent complexity - they are difficult only because they require learning arbitrary relationships and mappings, and because they sometimes require precision in their execution.
 
-<img src="/images/teapot-for-masochists.jpeg" alt="" class="alignleft" style="margin-right: 20px; margin-top: 8px;">
+![Teapot For Masochists](/images/teapot-for-masochists.jpeg){: style="max-height: 360px;"}
+{: class="alignright" style="margin-left: 20px; margin-top: 8px;"}
 
 Design is something that I've always wanted to learn, but never received a formal introduction to. It's something I've always emulated but always fail to create. With Design and UX of products becoming increasingly important as a differentiator for startups and a means to establish a memorable brand image or memory of a product, it's become even more imperative for me to learn Design.
 
@@ -18,7 +20,7 @@ Unfortunately, the Computer Science department does not offer any courses in Hum
 
 Per one of my friend's suggestion, I decided to pursue an Independent Research Study in Human-Computer Interaction with a focus on Interface Design and Data Visualization under Professor Duvall.
 
-To build the foundations in Design, Professor Duvall suggested that I read three books, [The Design of Everyday Things](), [Universal Principles of Design](), and [Interaction Design](), as an introduction to the vocabulary and language of Design. [The Design of Everyday Things](), the seminal work in Design by cognitive scientist and usability engineer Donald Norman from the 1980s, is a particularly enjoyable read. It formalizes design principles from careful observations of mundane everyday objects. Below are the 7 main principles discussed in the book to transform a difficult task into a simple one.
+To build the foundations in Design, Professor Duvall suggested that I read three books, [The Design of Everyday Things][], [Universal Principles of Design][], and [Interaction Design][], as an introduction to the vocabulary and language of Design. [The Design of Everyday Things][], the seminal work in Design by cognitive scientist and usability engineer Donald Norman from the 1980s, is a particularly enjoyable read. It formalizes design principles from careful observations of mundane everyday objects. Below are the 7 main principles discussed in the book to transform a difficult task into a simple one.
 
 #### 1. Use Both Knowledge in the World and Knowledge in the Head
 
@@ -42,29 +44,33 @@ Eliminate or restructure complexities, minimizing the planning and problem solvi
           * Can be inflexible as the system may not do exactly what's required because altering the automation is too difficult
           * Maintain layers of control and produce automation at each layer so we can switch and be flexible
 * Change the nature of the task
-Technology can help transform deep and wide structures into shallow, narrow ones
+Technology can help transform deep and wide structures into shallow, narrow ones  
 Shoelances vs Vecro
 
 #### 3. Make Things Visible: Bridge the Gulfs of  Execution and Evaluations
-Easy to see what's visible: what can be done and what their effects are.
-Actions should match intentions
-It's important to make the correct things visible so the users for the correct interpretations and mental models through the system image
+Easy to see what's visible: what can be done and what their effects are.  
+Actions should match intentions  
+It's important to make the correct things visible so the users for the correct interpretations and mental models through the system image  
 
 #### 4. Get the Mappings Right
-Natural Mappings ("response compatibility"): the the spatial relationships between  the controls and the system components or objects they control should be as **direct** as possible, with the controls and the objects themselves or have an analogical relationship
-The movements of the control should be similar or analogous to the expected operation of the system.
-feedback must be timely and easy to understand
+Natural Mappings ("response compatibility"): the the spatial relationships between  the controls and the system components or objects they control should be as **direct** as possible, with the controls and the objects themselves or have an analogical relationship  
+The movements of the control should be similar or analogous to the expected operation of the system.  
+feedback must be timely and easy to understand  
 
 #### 5. Explore the Power of Constraints, Both Natural and Artificial
 Reduce the number of possible alternative actions at each step to a few or ideally just one
 
 #### 6. Design for Error
-Assume errors will be made. Allow for recovery. Use forcing functions
-Each user action is an attempt to a step in the right direction
-An error is incompletely or improperly specified actions
+Assume errors will be made. Allow for recovery. Use forcing functions  
+Each user action is an attempt to a step in the right direction  
+An error is incompletely or improperly specified actions  
 
 #### 7. When All Fails, Standardize
-Standardize the problem and processes, so arbitrary mappings only have to be learned once
-It maybe difficult to obtain an agreement, early enough to save trouble later on, and late enough to take into account of the existing technologies and procedures
-Standardization is only essential when all necessary information cannot be placed in the world or when normal mapping cannot be exploited
-Users must be trained for this
+Standardize the problem and processes, so arbitrary mappings only have to be learned once  
+It maybe difficult to obtain an agreement, early enough to save trouble later on, and late enough to take into account of the existing technologies and procedures  
+Standardization is only essential when all necessary information cannot be placed in the world or when normal mapping cannot be exploited  
+Users must be trained for this  
+
+[Interaction Design]: http://www.amazon.com/Interaction-Design-Beyond-Human-Computer/dp/0470018666/
+[The Design of Everyday Things]: http://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/0465067107/
+[Universal Principles of Design]: http://www.amazon.com/Universal-Principles-Design-Revised-Updated/dp/1592535879/

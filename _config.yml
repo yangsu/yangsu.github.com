@@ -33,10 +33,11 @@ destination: public
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
-markdown: redcarpet2
+# markdown: redcarpet2
+markdown: maruku
 
-redcarpet:
-  extensions: ["hard_wrap", "no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough", "superscript"]
+# redcarpet:
+#   extensions: ["hard_wrap", "no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough", "superscript"]
 
 pygments: false # default python pygments have been replaced by pygments.rb
 
