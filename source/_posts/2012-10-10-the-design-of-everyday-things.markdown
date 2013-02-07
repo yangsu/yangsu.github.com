@@ -3,7 +3,6 @@ layout: post
 title: "The Design of Everyday Things"
 date: 2012-10-10 11:27
 comments: true
-published: false
 categories: [Design, Books, Independent Study, The Design of Everyday Things]
 ---
 
